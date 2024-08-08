@@ -1,0 +1,19 @@
+
+<mat-card appearance="outlined">
+    <mat-toolbar color="primary">
+        <span>Add Story Form</span>
+      </mat-toolbar>
+    <form (ngSubmit)="addStory()">
+        <mat-form-field appearance="fill">
+            <mat-label> Story Title </mat-label>
+            <input matInput [(ngModel)]="title" name="title" required>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Story Points</mat-label>
+            <input matInput type="number" [(ngModel)]="points" name="points" required>
+        </mat-form-field>
+
+        <button mat-flat-button color="primary" type="submit" style="width: 160px;">Add Story</button>
+    </form>
+</mat-card>
